@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Deploy'){
             steps{
-                build job 'deploy_to_stagingEnv'
+                build job:  'deploy_to_stagingEnv'
             }
         }
     }
