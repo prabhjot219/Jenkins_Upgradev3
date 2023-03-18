@@ -6,10 +6,12 @@ pipeline{
                 sh 'mvn -f java-tomcat-sample/pom.xml clean package'
             }
         }
-        stage('Deploy'){
+        stage('Deploy in Staging Environment'){
             steps{
-                build job:  'deploy_to_stagingEnv'
+                build job: 'deploy_to_stagingEnv'
+
             }
+            
         }
     }
 }
